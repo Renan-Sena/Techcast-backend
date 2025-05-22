@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/index.ts",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "postinstall": "prisma generate"
+}
   },
   "keywords": [],
   "author": "",

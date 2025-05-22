@@ -15,7 +15,7 @@ console.log('JWT_SECRET carregado:', process.env.JWT_SECRET);
 
 app.use(
   cors({
-    origin: 'Shttps://seu-frontend.vercel.app',
+    origin:  'https://techcast-frontend-1sjxg91j5-renans-projects-23340c8c.vercel.app',
     credentials: true,
   })
 );

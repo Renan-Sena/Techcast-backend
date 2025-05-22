@@ -15,7 +15,7 @@ console.log('JWT_SECRET carregado:', process.env.JWT_SECRET);
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5000',
+    origin: 'Shttps://seu-frontend.vercel.app',
     credentials: true,
   })
 );

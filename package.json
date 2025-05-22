@@ -7,7 +7,6 @@
     "dev": "ts-node-dev --respawn src/index.ts",
     "prisma": "prisma",
     "postinstall": "prisma generate"
-}
   },
   "keywords": [],
   "author": "",

@@ -13,12 +13,13 @@ const app = express();
 
 console.log('JWT_SECRET carregado:', process.env.JWT_SECRET);
 
-app.use(
-  cors({
-    origin:  'https://techcast-frontend-1sjxg91j5-renans-projects-23340c8c.vercel.app',
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: 'https://techcast-frontend-renans-projects-23340c8c.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 

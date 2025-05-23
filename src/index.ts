@@ -11,7 +11,7 @@ dotenv.config({ path: './.env' });
 
 const app = express();
 
-console.log('JWT_SECRET carregado:', process.env.JWT_SECRET);
+console.log('JWT_SECRET carregado:', 'segredo-super-seguro');
 
 const corsOptions = {
   origin: 'https://techcast-frontend-renans-projects-23340c8c.vercel.app',

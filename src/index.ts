@@ -6,6 +6,7 @@ import authRouter from './routes/auth';
 import episodesRoutes from './routes/episodes';
 import accountRoutes from './routes/account';
 import adminRoutes from './routes/admin';
+import path from 'path';
 
 dotenv.config({ path: './.env' });
 

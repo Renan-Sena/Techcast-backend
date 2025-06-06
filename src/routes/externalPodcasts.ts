@@ -1,7 +1,11 @@
+import dotenv from 'dotenv';
 import express, { Request, Response } from 'express';
 
+
+dotenv.config({ path: './.env' });
+
 const router = express.Router();
-const LISTEN_NOTES_API_KEY = process.env.LISTEN_NOTES_API_KEY!;
+const LISTEN_NOTES_API_KEY = '3ce78471c02c43de90397d6a1d6266b5';
 
 // GET /api/external-podcasts?q=palavra-chave
 router.get('/', async (req: Request, res: Response): Promise<void> => {
@@ -18,6 +22,8 @@ router.get('/', async (req: Request, res: Response): Promise<void> => {
         'X-ListenAPI-Key': LISTEN_NOTES_API_KEY,
       },
     });
+
+    console.log('ListenNotes status:', externalRes.status);
 
     const data = await externalRes.json();
 

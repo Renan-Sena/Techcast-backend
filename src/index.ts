@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
+import externalPodcastRoutes from './routes/externalPodcasts';
 import authRouter from './routes/auth';
 import episodesRoutes from './routes/episodes';
 import accountRoutes from './routes/account';
@@ -29,6 +29,7 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/api/auth', authRouter);
 app.use('/api/episodes', episodesRoutes);
+app.use('/api/external-podcasts', externalPodcastRoutes);
 app.use('/api', accountRoutes);
 app.use('/api/admin', adminRoutes);
 
